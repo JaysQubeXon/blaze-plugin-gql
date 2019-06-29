@@ -1,7 +1,7 @@
 {
-  "name": "blaze-bridge-graphql",
+  "name": "blaze-plugin-gql",
   "version": "1.0.0",
-  "description": "Bridge data from Blaze POS using GraphQL",
+  "description": "GraphQL spirited plugin for Blaze POS system",
   "main": "dist/index.js",
   "scripts": {
     "start": "tsc -w & node -r dotenv/config dist/index.js localhost 1717",
