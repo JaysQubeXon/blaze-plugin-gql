@@ -15,30 +15,27 @@ const shouldHookUpAPI = (service: AllowedAPIS): boolean =>
 
 const hookUpWith = (service: AllowedAPIS) => apis[service];
 
+const APIs: APIHooks = {};
+function hookUpAPI(service: AllowedAPIS) {
+  shouldHookUpAPI(service) ? (APIs[service] = hookUpWith(service)) : null;
+}
+
 export const context: ContextFunction<express.Request, AppContext> = ({
   req
 }: FunctionParams): ContextApollo<AppContext> => {
+  const context: AppContext = { isAllowed: true };
   const { headers } = req;
-  let keys: any;
+
   if (longStringExists(headers.authorization)) {
-    keys.authorization = req.headers.authorization;
-  } else {
-    return { isAllowed: false };
+    context.keys.authorization = req.headers.authorization;
+    if (longStringExists(headers.partner_key)) {
+      context.keys.partner_key = req.headers.partner_key;
+    }
   }
 
-  if (longStringExists(headers.partner_key)) {
-    keys.partner_key = req.headers.partner_key;
-  }
-
-  const apis: APIHooks = {};
-  function hookUpAPI(service: AllowedAPIS) {
-    shouldHookUpAPI(service) ? (apis[service] = hookUpWith(service)) : null;
-  }
   hookUpAPI("cart");
 
-  return {
-    keys,
-    db: null,
-    isAllowed: true
-  };
+  context.apis = APIs;
+  
+  return context;
 };
