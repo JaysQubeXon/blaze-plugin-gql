@@ -1,5 +1,5 @@
 import { GetOrderHistoryResponse } from "../src/apis/types/responses.d";
-import { pool } from "../src/core/configs/psql";
+import { pool } from "../configs/psql";
 import { CartAPIActions } from "../src/context.d";
 import { Error } from "../src/common";
 
