@@ -1,0 +1,11 @@
+type SplitPayment {
+  id: String
+  created: Int
+  modified: Int
+  deleted: Boolean
+  updated: Boolean
+  companyId: String
+  cashAmt: Int
+  creditDebitAmt: Int
+  checkAmt: Int
+}

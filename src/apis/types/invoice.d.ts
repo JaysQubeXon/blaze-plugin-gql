@@ -1,0 +1,40 @@
+import { Tracked, Asset, Notes, BlazeCart } from "./";
+
+export interface Invoice extends Tracked {
+  companyId: string;
+  shopId: string;
+  dirty: boolean;
+  customerId: string;
+  license: string;
+  invoiceNumber: string;
+  orderNumber: string;
+  invoiceTerms: "NET_3number" | string;
+  salesPersonId: string;
+  attachments: Asset[];
+  dueDate: number;
+  termsAndconditions: string;
+  notes: Notes[];
+  invoiceDate: number;
+  estimatedDeliveryDate: number;
+  estimatedDeliveryTime: number;
+  invoiceStatus: "IN_PROGRESS" | string;
+  invoicePaymentStatus: "UNPAID" | string;
+  inventoryProcessed: boolean;
+  inventoryProcessedDate: number;
+  active: boolean;
+  relatedEntity: boolean;
+  cart: BlazeCart;
+  invoiceQrCodeAsset: Asset;
+  invoiceQrCodeUrl: string;
+  companyContactId: string;
+  deliveryCharges: number;
+  total: number;
+  wholeSaleCostOfCannabiesItems: number;
+  markup: number;
+  exciseTax: number;
+  totalInvoiceAmount: number;
+  totalTax: number;
+  transactionType: "ARMS_LENGTH" | string;
+  wholeSaleCostOfNonCannabisItems: number;
+  currentEmployeeId: string;
+}

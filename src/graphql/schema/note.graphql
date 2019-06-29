@@ -1,0 +1,11 @@
+type Note {
+  id: String
+  created: Int
+  modified: Int
+  deleted: Boolean
+  updated: Boolean
+  writerId: String
+  writerName: String
+  message: String
+  enableOnFleet: Boolean
+}

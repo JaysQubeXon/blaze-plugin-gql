@@ -1,0 +1,9 @@
+{
+  "psql": {
+    "user": "postgres",
+    "host": "localhost",
+    "database": "blaze",
+    "password": "",
+    "port": 5432
+  }
+ }

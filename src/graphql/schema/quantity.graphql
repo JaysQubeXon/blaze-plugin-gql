@@ -1,0 +1,20 @@
+type QuantityLogs {
+  id: String
+  inventoryId: String
+  quantity: Int
+  prepackageItemId: String
+  batchId: String
+}
+
+type Quantities {
+  id: String
+  created: Int
+  modified: Int
+  deleted: Boolean
+  updated: Boolean
+  companyId: String
+  shopId: String
+  dirty: Boolean
+  inventoryId: String
+  quantity: Int
+}

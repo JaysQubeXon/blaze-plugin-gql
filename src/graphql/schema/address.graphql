@@ -1,0 +1,13 @@
+type Address {
+  id: String
+  created: Int
+  modified: Int
+  deleted: Boolean
+  updated: Boolean
+  companyId: String
+  address: String
+  city: String
+  state: String
+  zipCode: String
+  country: String
+}

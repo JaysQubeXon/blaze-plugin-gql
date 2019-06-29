@@ -1,0 +1,31 @@
+type Query {
+  getOrderHistory(limit: Int, start: Int, cuid: String): [CartsPayload]
+  getActiveCart(sessionID: String, cuid: String): CartPayload
+}
+
+type Mutation {
+  updateCart(id: String!, cart: BlazeCartInput!, cuid: String): CartPayload
+  submitCart(id: String!, cart: BlazeCartInput!, cuid: String): CartPayload
+}
+
+type Error {
+  code: String
+  location: String
+  message: String
+  error: String
+}
+
+input BlazeCartInput {
+  pickupType: PickupTypes
+  consumerID: String
+  items: BlazeCartObject
+}
+
+input BlazeCartObject {
+  cart: [BlazeCartItemInput]
+}
+
+input BlazeCartItemInput {
+  productID: String
+  quantity: Int
+}

@@ -1,0 +1,21 @@
+type Asset {
+  id: String
+  created: Int
+  modified: Int
+  deleted: Boolean
+  updated: Boolean
+  companyId: String
+  name: String
+  key: String
+  type: AssetTypes
+  publicURL: String
+  active: Boolean
+  priority: Int
+  secured: Boolean
+  thumbURL: String
+  mediumURL: String
+  largeURL: String
+  assetType: AssetTypes
+  largeX2URL: String
+  origURL: String
+}

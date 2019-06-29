@@ -1,0 +1,4 @@
+type RefundOrderItemRequest {
+  orderItemId: String
+  quantity: Int
+}

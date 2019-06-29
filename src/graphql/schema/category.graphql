@@ -1,0 +1,17 @@
+type BlazeCategory {
+  id: String
+  created: Int
+  modified: Int
+  deleted: Boolean
+  updated: Boolean
+  companyId: String
+  shopId: String
+  dirty: Boolean
+  name: CategoryTypes
+  cannabis: Boolean
+  photo: Asset
+  unitType: UnitTypes
+  active: Boolean
+  priority: Int
+  lowThreshold: Int
+}

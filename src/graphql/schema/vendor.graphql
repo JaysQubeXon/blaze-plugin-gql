@@ -1,0 +1,37 @@
+type BlazeVendor {
+  id: String
+  created: Int
+  modified: Int
+  deleted: Boolean
+  updated: Boolean
+  companyId: String
+  importId: String
+  active: Boolean
+  name: String
+  phone: String
+  email: String
+  fax: String
+  address: Address
+  description: String
+  website: String
+  firstName: String
+  lastName: String
+  notes: [Note]
+  licenseNumber: String
+  assets: [Asset]
+  backOrderEnabled: Boolean
+  licenseExpirationDate: Int
+  armsLengthType: ArmsLengthTypes
+  brands: [String]
+  # qbVendorRef: [unknown]
+  qbDesktopRef: String
+  companyType: CompanyTypes
+  additionalAddressList: [Address]
+  credits: Int
+  mobileNumber: Int
+  licenceType: LicenceTypes
+  relatedEntity: Boolean
+  vendorType: VendorTypes
+  dbaName: String
+  vendorKey: String
+}

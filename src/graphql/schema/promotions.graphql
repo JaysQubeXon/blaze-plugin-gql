@@ -1,0 +1,22 @@
+type PromotionReqs {
+  id: String
+  created: Int
+  modified: Int
+  deleted: Boolean
+  updated: Boolean
+  companyId: String
+  promotionId: String
+  rewardId: String
+}
+
+type PromotionReqsLogs {
+  id: String
+  created: Int
+  modified: Int
+  deleted: Boolean
+  updated: Boolean
+  companyId: String
+  promotionId: String
+  rewardId: String
+  amount: Int
+}

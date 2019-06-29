@@ -1,0 +1,80 @@
+type TaxInfo {
+  id: String
+  created: Int
+  modified: Int
+  deleted: Boolean
+  updated: Boolean
+  cityTax: Int
+  stateTax: Int
+  federalTax: Int
+}
+
+type TaxResults {
+  id: String
+  created: Int
+  modified: Int
+  deleted: Boolean
+  updated: Boolean
+  totalPreCalcTax: Int
+  totalPostCalcTax: Int
+  totalCityTax: Int
+  totalCountyTax: Int
+  totalStateTax: Int
+  totalFedTax: Int
+  totalCityPreTax: Int
+  totalCountyPreTax: Int
+  totalStatePreTax: Int
+  totalFedPreTax: Int
+  totalExciseTax: Int
+  totalNALPreExciseTax: Int
+  totalALExciseTax: Int
+  totalALPostExciseTax: Int
+  cultivationTaxResult: CultivateTaxResult
+}
+
+type CultivateTaxResult {
+  totalFlowerTax: Int
+  totalLeafTax: Int
+  totalFlowerOz: Int
+  totalLeafOz: Int
+  totalCultivationTax: Int
+  leafTaxOz: Int
+  flowerTaxOz: Int
+}
+
+type TaxTable {
+  id: String
+  created: Int
+  modified: Int
+  deleted: Boolean
+  updated: Boolean
+  companyId: String
+  shopId: String
+  dirty: Boolean
+  name: String
+  active: Boolean
+  taxType: TaxTypes
+  taxOrder: TaxOrderTypes
+  consumerType: ConsumerTypes
+  cityTax: TerritoryTax
+  countyTax: TerritoryTax
+  stateTax: TerritoryTax
+  federalTax: TerritoryTax
+}
+
+type TerritoryTax {
+  id: String
+  created: Int
+  modified: Int
+  deleted: Boolean
+  updated: Boolean
+  companyId: String
+  shopId: String
+  dirty: Boolean
+  taxRate: Int
+  compound: Boolean
+  active: Boolean
+  territory: TerritoryTypes
+  activeExciseTax: Boolean
+  taxOrder: TaxOrderTypes
+}

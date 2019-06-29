@@ -1,0 +1,7 @@
+type PotencyAmount {
+  thc: Int
+  cbd: Int
+  cbn: Int
+  thca: Int
+  cbda: Int
+}

@@ -1,0 +1,8 @@
+type MedicalCondition {
+  id: String
+  created: Int
+  modified: Int
+  deleted: Boolean
+  updated: Boolean
+  name: String 
+}

@@ -1,0 +1,23 @@
+type PriceBreak {
+  id: String
+  created: Int
+  modified: Int
+  deleted: Boolean
+  updated: Boolean
+  companyId: String
+  priceBreakType: PriceBreakTypes
+  name: String
+  price: Int
+  quantity: Int
+  active: Boolean
+  priority: Int
+  displayName: String
+}
+
+type PriceRange {
+  id: String
+  weightToleranceId: String
+  price: Int
+  priority: Int
+  weightTolerance: WeightTolerance
+}

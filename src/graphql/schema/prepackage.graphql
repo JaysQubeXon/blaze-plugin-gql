@@ -1,0 +1,29 @@
+type Prepackage {
+  id: String
+  created: Int
+  modified: Int
+  deleted: Boolean
+  updated: Boolean
+  companyId: String
+  shopId: String
+  dirty: Boolean
+  customWeight: Boolean
+  toleranceId: String
+  productId: String
+  active: Boolean
+  unitValue: Int
+  price: Int
+  name: String
+}
+
+type PrepackageProductItem {
+  companyId: String
+  shopId: String
+  dirty: Boolean
+  productId: String
+  batchId: String
+  batchSKU: String
+  prepackageId: String
+  sku: String
+  active: Boolean
+}

@@ -1,0 +1,124 @@
+enum DeliveryDiscountTypes {
+  Cash
+}
+
+enum PaymentTypes {
+  Full
+}
+
+enum StorageLocationTypes {
+  CashVault
+  CashDrawer
+}
+
+enum ConsumerTypes {
+  Other
+  AdultUse
+  MedicinalState
+  MedicinalThirdParty
+}
+
+enum PaymentOptionTypes {
+  Cash
+  None
+}
+
+enum DiscountTypes {
+  Cash
+}
+
+enum TaxOrderTypes {
+  PostTaxed
+}
+
+enum TaxTypes {
+  Default
+  Custom
+}
+
+enum StatusTypes {
+  Active
+}
+
+enum PriceBreakTypes {
+  None
+  HalfGramUnit
+  OneGramUnit
+  TwoGramUnits
+  ThreeGramUnits
+  FourGramUnits
+  FiveGramUnits
+  SixGramUnits
+  SevenGramUnits
+  EightGramUnits
+  NineGramUnits
+}
+
+enum ProductSaleTypes {
+  Medicinal
+}
+
+enum WeightPerUnitTypes {
+  EACH
+  HALF_GRAM
+  FULL_GRAM
+}
+
+enum CategoryTypes {
+  Topicals
+  Preroll
+  Flowers
+  Wax
+  CO2Oil
+  VapePens
+  Edibles
+  Accessories
+}
+
+enum WeightKeyTypes {
+  UNIT
+}
+
+enum TerritoryTypes {
+  Default
+  City
+  Country
+  State
+  Federal
+}
+
+enum AssetTypes {
+  Document
+  Photo
+}
+
+enum UnitTypes {
+  unit
+}
+
+enum FlowerTypes {
+  Sativa
+  Hybrid
+  Indica
+}
+
+enum ArmsLengthTypes {
+  ARMS_LENGTH 
+}
+
+enum CompanyTypes {
+  DISTRIBUTOR
+}
+
+enum LicenceTypes {
+  RECREATIONAL
+}
+
+enum VendorTypes {
+  CUSTOMER
+}
+
+enum PickupTypes {
+  Pickup,
+  Delivery
+}

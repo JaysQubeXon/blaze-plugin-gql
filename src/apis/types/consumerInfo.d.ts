@@ -1,0 +1,55 @@
+import { Address, SignedContract, MemberStatuse, DlPhoto, RecPhoto } from "./";
+
+export interface ConsumerInfo {
+  id: string;
+  created: number;
+  modified: number;
+  deleted: boolean;
+  updated: boolean;
+  companyId: string;
+  email: string;
+  password: string;
+  firstName: string;
+  lastName: string;
+  middleName: string;
+  address?: Address;
+  dob: number;
+  primaryPhone: string;
+  cpn: string;
+  textOptIn: boolean;
+  emailOptIn: boolean;
+  medical: boolean;
+  searchText: string;
+  sex: number; // male = 2 NOT "MALE"
+  marketingSource: string;
+  sourceCompanyId: string;
+  verifyMethod: "Website";
+  verificationWebsite: string;
+  verificationPhone: string;
+  doctorFirstName: string;
+  doctorLastName: string;
+  doctorLicense: string;
+  dlNo: string;
+  dlExpiration: number;
+  dlState: string;
+  dlPhoto: DlPhoto;
+  recPhoto: RecPhoto;
+  recNo: string;
+  recExpiration: number;
+  recIssueDate: number;
+  notificationType: "Email" | "None";
+  consumerType: "AdultUse";
+  verified: boolean;
+  active: boolean;
+  memberIds: string[];
+  memberStatuses?: MemberStatuse[];
+  signedContracts?: SignedContract[];
+  source: "Blaze";
+  importId: string;
+  memberId: string;
+  accepted: boolean;
+  acceptedDate: number;
+  reason: string;
+  lastSyncDate: number;
+  rejectedDate: number;
+}

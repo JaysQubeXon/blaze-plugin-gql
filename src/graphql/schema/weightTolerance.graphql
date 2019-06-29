@@ -1,0 +1,16 @@
+type WeightTolerance {
+  id: String
+  created: Int
+  modified: Int
+  deleted: Boolean
+  updated: Boolean
+  companyId: String
+  name: String
+  startWeight: Int
+  endWeight: Int
+  priority: Int
+  unitValue: Int
+  weightValue: Int
+  weightKey: WeightKeyTypes
+  enabled: Boolean
+}

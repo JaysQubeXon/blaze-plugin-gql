@@ -1,0 +1,30 @@
+type BlazeBrand {
+  id: String
+  created: Int
+  modified: Int
+  deleted: Boolean
+  updated: Boolean
+  companyId: String
+  name: String
+  active: Boolean
+  website: String
+  phoneNo: String
+  brandLogo: Asset
+  vendorList: [String]
+}
+
+type BlazeBrandWithVendors {
+  id: String
+  created: Int
+  modified: Int
+  deleted: Boolean
+  updated: Boolean
+  companyId: String
+  name: String
+  active: Boolean
+  website: String
+  phoneNo: String
+  brandLogo: Asset
+  vendorList: [String]
+  vendors: [BlazeVendor]
+}
