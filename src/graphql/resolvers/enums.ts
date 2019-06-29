@@ -86,19 +86,64 @@ export default {
     Indica: "Indica"
   },
   ArmsLengthTypes: {
-    ARMS_LENGTH: "ARMS_LENGTH"
+    ARMS_LENGTH: "ARMS_LENGTH",
+    NON_ARMS_LENGTH: "NON_ARMS_LENGTH"
   },
   CompanyTypes: {
-    DISTRIBUTOR: "DISTRIBUTOR"
+    DISTRIBUTOR: "DISTRIBUTOR",
+    CULTIVATOR: "CULTIVATOR",
+    RETAILER: "RETAILER",
+    MANUFACTURER: "MANUFACTURER",
+    TRANSPORTER: "TRANSPORTER",
+    TESTING_FACILITY: "TESTING_FACILITY",
+    OTHER: "OTHER"
   },
   LicenceTypes: {
-    RECREATIONAL: "RECREATIONAL"
+    RECREATIONAL: "RECREATIONAL",
+    MEDICINAL: "MEDICINAL",
+    BOTH: "BOTH"
   },
   VendorTypes: {
-    CUSTOMER: "CUSTOMER"
+    CUSTOMER: "CUSTOMER",
+    VENDOR: "VENDOR",
+    BOTH: "BOTH"
   },
   PickupTypes: {
     Pickup: "Pickup",
     Delivery: "Delivery"
+  },
+  InvoiceTermTypes: {
+    COD: "COD",
+    NET_7: "NET_7",
+    NET_15: "NET_15",
+    NET_30: "NET_30",
+    NET_45: "NET_45",
+    NET_60: "NET_60",
+    CUSTOM_DATE: "CUSTOM_DATE"
+  },
+  CannabisTypes: {
+    DEFAULT: "DEFAULT",
+    NON_CANNABIS: "NON_CANNABIS",
+    CBD: "CBD",
+    CONCENTRATE: "CONCENTRATE",
+    NON_CONCENTRATE: "NON_CONCENTRATE",
+    PLANT: "PLANT",
+    EDIBLE: "EDIBLE",
+    EXTRACT: "EXTRACT",
+    DRY_FLOWER: "DRY_FLOWER",
+    KIEF: "KIEF",
+    DRY_LEAF: "DRY_LEAF",
+    LIQUID: "LIQUID",
+    SUPPOSITORY: "SUPPOSITORY",
+    TINCTURE: "TINCTURE",
+    TOPICAL: "TOPICAL",
+    OIL: "OID",
+    SEED: "SEED",
+    THC: "THC"
+  },
+  ProductTypes: {
+    REGULAR: "REGULAR",
+    DERIVED: "DERIVED",
+    BUNDLE: "BUNDLE"
   }
 };

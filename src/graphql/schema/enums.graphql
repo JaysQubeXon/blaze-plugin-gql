@@ -103,22 +103,70 @@ enum FlowerTypes {
 }
 
 enum ArmsLengthTypes {
-  ARMS_LENGTH 
+  ARMS_LENGTH
+  NON_ARMS_LENGTH
 }
 
 enum CompanyTypes {
   DISTRIBUTOR
+  CULTIVATOR
+  RETAILER
+  MANUFACTURER
+  TRANSPORTER
+  TESTING_FACILITY
+  OTHER
 }
 
 enum LicenceTypes {
   RECREATIONAL
+  MEDICINAL
+  BOTH
 }
 
 enum VendorTypes {
   CUSTOMER
+  VENDOR
+  BOTH
 }
 
 enum PickupTypes {
-  Pickup,
+  Pickup
   Delivery
+}
+
+enum InvoiceTermTypes {
+  COD
+  NET_7
+  NET_15
+  NET_30
+  NET_45
+  NET_60
+  CUSTOM_DATE
+}
+
+enum CannabisTypes {
+  DEFAULT
+  NON_CANNABIS
+  CBD
+  CONCENTRATE
+  NON_CONCENTRATE
+  PLANT
+  EDIBLE
+  EXTRACT
+  DRY_FLOWER
+  KIEF
+  DRY_LEAF
+  LIQUID
+  SUPPOSITORY
+  TINCTURE
+  TOPICAL
+  OIL
+  SEED
+  THC
+}
+
+enum ProductTypes {
+  REGULAR
+  DERIVED
+  BUNDLE
 }
