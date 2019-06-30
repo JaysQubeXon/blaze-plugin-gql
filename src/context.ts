@@ -23,7 +23,7 @@ function hookUpAPI(service: AllowedAPIS) {
 export const context: ContextFunction<express.Request, AppContext> = ({
   req
 }: FunctionParams): ContextApollo<AppContext> => {
-  const context: AppContext = { isAllowed: true };
+  const context: AppContext = { };
   const { headers } = req;
 
   if (longStringExists(headers.authorization)) {
@@ -32,8 +32,10 @@ export const context: ContextFunction<express.Request, AppContext> = ({
       context.keys.partner_key = req.headers.partner_key;
     }
   }
-
-  hookUpAPI("cart");
+  const apiTypes = Object.keys(apis);
+  apiTypes.forEach((api: AllowedAPIS) => {
+    hookUpAPI(api);
+  });
 
   context.apis = APIs;
   

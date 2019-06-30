@@ -3,7 +3,7 @@ import { Error } from "../common.d";
 import { keys } from '../load-config';
 import { ApiKeys, Headers, CoreState } from "./core";
 import { AppContext } from "../context.d";
-import { longStringExists, isPropOnObject } from "../utils";
+import { longStringExists, isNotObject } from "../utils";
 
 export default class Core {
   protected axios: AxiosInstance = Axios.create();
@@ -58,23 +58,21 @@ export default class Core {
   }
 
   protected async useApiKeys(location: string): Promise<boolean> {
-    if (!this.context.isAllowed) {
-      this.accessDenied(location);
-    }
+    
     // local json option check:
-    if (!keys && !this.context) {
+    if (isNotObject(keys) && isNotObject(this.context)) {
       /** No keys */
       this.accessDenied(location);
       return false;
-    } else if (
-      isPropOnObject("api_key", keys) &&
-      isPropOnObject("keys", this.context) &&
-      isPropOnObject("authorization", this.context.keys)
-    ) {
-      /** if both sources have keys, alert! */
-      this.dublicateAccessKeys(location);
-      return false;
-    } else if (!this.context.keys && isPropOnObject("api_key", keys)) {
+    // } else if (
+    //   keys["api_key"] &&
+    //   this.context["keys"] &&
+    //   this.context.keys["authorization"]
+    // ) {
+    //   /** if both sources have keys, alert! */
+    //   this.dublicateAccessKeys(location);
+    //   return false;
+    } else if (!this.context.keys && keys["api_key"]) {
       /**  local json object exists and context has no keys */
       const {
         api_key,
@@ -101,17 +99,17 @@ export default class Core {
         /** API keys mounted on headers from json config file */
         return true;
       }
-    } else if (!keys && isPropOnObject("keys", this.context)) {
+    } else if (!keys && this.context["keys"]) {
       /** Local json is empty and keys exist on this.context */
       if (
-        isPropOnObject("authorization", this.context.keys) &&
+        this.context.keys["authorization"] &&
         longStringExists(this.context.keys.authorization)
       ) {
         /** prop `authorization` verified on context keys object */
         this.headers.Authorization = this.context.keys.authorization;
         this.setState({ accessType: "public" });
         if (
-          isPropOnObject("partner_key", this.context.keys) &&
+          this.context.keys["partner_key"] &&
           longStringExists(this.context.keys.partner_key)
         ) {
           /** request has partner privilages */

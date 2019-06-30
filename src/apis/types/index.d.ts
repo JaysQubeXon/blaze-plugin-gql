@@ -21,7 +21,7 @@ import { BlazeCart } from "./Cart.d";
 import { Invoice } from "./invoice.d";
 import {
   BlazeMember,
-  MemberStatuse,
+  MemberStatus,
   MemberGroup,
   Recommendation,
   Identifications,
@@ -161,7 +161,7 @@ export {
   TransactionSourceEnum,
   DlPhoto,
   RecPhoto,
-  MemberStatuse,
+  MemberStatus,
   MemberGroup,
   Recommendation,
   Identifications,

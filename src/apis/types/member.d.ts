@@ -109,7 +109,7 @@ export interface MemberGroup extends Tracked {
   discountType: "Cash" | string;
 }
 
-export interface MemberStatuse extends Tracked {
+export interface MemberStatus extends Tracked {
   companyId: string;
   shopId: string;
   dirty: boolean;

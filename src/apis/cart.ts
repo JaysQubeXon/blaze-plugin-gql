@@ -22,18 +22,13 @@ import {
 } from "../utils";
 import { Error } from "../common";
 
-/**
- * @todo empty result error handling
- * @todo catch error handling
- */
-
 class CartAPI extends Core {
   constructor(context: AppContext) {
     super(context);
   }
 
   public async updateCart({ id, cart, cuid }: UpdateCart): CartPayload {
-    if (await this.useApiKeys("Cart-updateCart")) {
+    if (!this.useApiKeys("Cart-updateCart")) {
       return { payload: null };
     }
 
@@ -98,7 +93,7 @@ class CartAPI extends Core {
   }
 
   public async submitCart({ id, cart, cuid }: UpdateCart): CartPayload {
-    if (await this.useApiKeys("Cart-submitCart")) {
+    if (!this.useApiKeys("Cart-submitCart")) {
       return { payload: null };
     }
 
@@ -164,9 +159,10 @@ class CartAPI extends Core {
     { limit, start, cuid }: GetOrderHistory,
     cb?: CallbackFunc<GetOrderHistoryResponse, void>
   ): Promise<GetOrderHistoryResponse> {
-    if (await this.useApiKeys("Cart-getOrderHistory")) {
-      return { values: null, limit: 0, skip: 0, total: 0 };
+    if (!this.useApiKeys("Cart-getOrderHistory")) {
+      return { values: [], limit: 0, skip: 0, total: 0 };
     }
+    
 
     let params: GetOrderHistory = {};
 
@@ -219,7 +215,7 @@ class CartAPI extends Core {
           code: "empty-result",
           location: "Cart-getOrderHistory",
           message: `Axios response returned empty.`,
-          error: response
+          error: JSON.stringify(response)
         });
         return { values: null, limit: 0, skip: 0, total: 0 };
       }
@@ -235,7 +231,7 @@ class CartAPI extends Core {
   }
 
   public async getActiveCart({ sessionID, cuid }: GetActiveCart): CartPayload {
-    if (await this.useApiKeys("Cart-getActiveCart")) {
+    if (!this.useApiKeys("Cart-getActiveCart")) {
       return { payload: null };
     }
 

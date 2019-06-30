@@ -1,4 +1,4 @@
-import { Address, SignedContract, MemberStatuse, DlPhoto, RecPhoto } from "./";
+import { Address, SignedContract, MemberStatus, DlPhoto, RecPhoto } from "./";
 
 export interface ConsumerInfo {
   id: string;
@@ -42,7 +42,7 @@ export interface ConsumerInfo {
   verified: boolean;
   active: boolean;
   memberIds: string[];
-  memberStatuses?: MemberStatuse[];
+  memberStatuses?: MemberStatus[];
   signedContracts?: SignedContract[];
   source: "Blaze";
   importId: string;
