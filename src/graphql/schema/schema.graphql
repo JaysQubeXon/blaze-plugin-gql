@@ -1,5 +1,5 @@
 type Query {
-  getOrderHistory(limit: Int, start: Int, cuid: String): [CartsPayload]
+  getOrderHistory(limit: Int, start: Int, cuid: String): CartsPayload
   getActiveCart(sessionID: String, cuid: String): CartPayload
 }
 
