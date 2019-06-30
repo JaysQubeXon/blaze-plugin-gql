@@ -4,6 +4,9 @@ type Query {
 }
 
 type Mutation {
+  # Authentication API
+  register(consumer: RegisterConsumerInput): RegisterPayload
+  # Cart API
   updateCart(id: String!, cart: BlazeCartInput!, cuid: String): CartPayload
   submitCart(id: String!, cart: BlazeCartInput!, cuid: String): CartPayload
 }
@@ -28,4 +31,18 @@ input BlazeCartObject {
 input BlazeCartItemInput {
   productID: String
   quantity: Int
+}
+
+input RegisterConsumerInput {
+  email: String!
+  firstName: String!
+  lastName: String!
+  phoneNumber: String!
+  dob: Int
+  sex: String
+}
+
+type RegisterPayload {
+  consumer: ConsumerInfo
+  errors: [Error]
 }

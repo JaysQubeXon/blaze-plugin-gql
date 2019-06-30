@@ -1,0 +1,155 @@
+type BlazeMemeber {
+  id: String
+  created: Int
+  modified: Int
+  deleted: Boolean
+  updated: Boolean
+  companyId: String
+  shopId: String
+  dirty: Boolean
+  firstName: String
+  lastName: String
+  middleName: String
+  address: Address
+  email: String
+  dob: Int
+  primaryPhone: String
+  textOptIn: Boolean
+  emailOptIn: Boolean
+  medical: Boolean
+  searchText: String
+  sex: GenderTypes
+  status: StatusTypes
+  notes: [Note]
+  contracts: [Contract]
+  preferences: [Preference]
+  identifications: [Identification]
+  recommendations: [Recommendation]
+  lastVisitDate: Int
+  startDate: Int
+  importId: String
+  memberGroupId: String
+  memberGroup: MemberGroup
+  recentProducts: [String]
+  dlExpired: Boolean
+  recommendationExpired: Boolean
+  agreementExpired: Boolean
+  emailVerified: Boolean
+  consumerUserId: String
+  marketingSource: String
+  consumerType: ConsumerTypes
+  enableLoyalty: Boolean
+  loyaltyPoints: Int
+  lifetimePoints: Int
+  enabledCareGiver: Boolean
+  careGivers: [String]
+  addresses: [Address]
+  # qbCustomerRef: [unknown]
+  banPatient: Boolean
+  enabledCannabisLimit: Boolean
+  expStatuses: [String]
+}
+
+type MemberStatus {
+  id: String
+  created: Int
+  modified: Int
+  deleted: Boolean
+  updated: Boolean
+  companyId: String
+  shopId: String
+  dirty: Boolean
+  consumerId: String
+  memberId: String
+  accepted: Boolean
+  acceptedDate: Int
+  reason: String
+  lastSyncDate: Int
+}
+
+type MemberGroup {
+  id: String
+  created: Int
+  modified: Int
+  deleted: Boolean
+  updated: Boolean
+  companyId: String
+  shopId: String
+  dirty: Boolean
+  name: String
+  discount: Int
+  defaultGroup: Boolean
+  active: Boolean
+  memberCount: Int
+  memberCountTextOptIn: Int
+  memberCountEmailOptIn: Int
+  discountType: DiscountTypes
+}
+
+type Recommendation {
+  id: String
+  created: Int
+  modified: Int
+  deleted: Boolean
+  updated: Boolean
+  companyId: String
+  recommendationNumber: String
+  verifyWebsite: String
+  verifyPhoneNumber: String
+  state: String
+  issueDate: Int
+  expirationDate: Int
+  frontPhoto: Asset
+  assets: [Asset]
+  doctorId: String
+  verified: Boolean
+  verifyMethod: VerifyMethodTypes
+  doctor: Doctor
+}
+
+type Identification {
+  id: String
+  created: Int
+  modified: Int
+  deleted: Boolean
+  updated: Boolean
+  companyId: String
+  licenseNumber: String
+  expirationDate: Int
+  frontPhoto: Asset
+  assets: [Asset]
+  state: String
+  type: IdentificationTypes
+}
+
+type Preference {
+  id: String
+  created: Int
+  modified: Int
+  deleted: Boolean
+  updated: Boolean
+  companyId: String
+  name: String
+}
+
+type Contract {
+  id: String
+  created: Int
+  modified: Int
+  deleted: Boolean
+  updated: Boolean
+  companyId: String
+  shopId: String
+  dirty: Boolean
+  contractId: String
+  membershipId: String
+  signedDate: Int
+  signaturePhoto: Asset
+  signedDigitally: Boolean
+  consumerId: String
+  memberName: String
+  employeeName: String
+  employeeSignaturePhoto: Asset
+  witnessName: String
+  witnessSignaturePhoto: Asset
+}

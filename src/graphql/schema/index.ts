@@ -23,7 +23,11 @@ const files = [
   "splitPayment",
   "taxes",
   "vendor",
-  "weightTolerance"
+  "weightTolerance",
+  "member",
+  "ConsumerInfo",
+  "doctor",
+  "signedContract"
 ];
 
 let schema = "";

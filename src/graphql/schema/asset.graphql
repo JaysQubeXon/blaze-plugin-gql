@@ -19,3 +19,29 @@ type Asset {
   largeX2URL: String
   origURL: String
 }
+
+type DlPhoto {
+  id: String
+  created: Int
+  modified: Int
+  deleted: Boolean
+  updated: Boolean
+  name: String
+  key: String
+  type: AssetTypes
+  active: Boolean
+  assetType: AssetTypes
+}
+
+type RecPhoto {
+  id: String
+  created: Int
+  modified: Int
+  deleted: Boolean
+  updated: Boolean
+  name: String
+  key: String
+  type: AssetTypes
+  active: Boolean
+  assetType: AssetTypes
+}

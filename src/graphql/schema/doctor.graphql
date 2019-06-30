@@ -1,0 +1,23 @@
+type Doctor {
+  id: String
+  created: Int
+  modified: Int
+  deleted: Boolean
+  updated: Boolean
+  companyId: String
+  importId: String
+  firstName: String
+  lastName: String
+  license: String
+  website: String
+  phoneNumber: String
+  email: String
+  fax: String
+  degree: String
+  state: String
+  searchText: String
+  address: Address
+  active: Boolean
+  notes: [Note]
+  assets: [Asset]
+}

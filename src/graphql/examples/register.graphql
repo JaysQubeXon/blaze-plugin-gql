@@ -1,0 +1,18 @@
+mutation Register {
+  register(consumer: {
+    email: "test1987@gmail.com",
+    phoneNumber: "123456789",
+    firstName:"Test",
+    lastName: "1",
+    sex: "MALE",
+    dob: 0
+  }) {
+    consumer {
+      firstName
+      verified
+    }
+    errors {
+      code
+    }
+  }
+}

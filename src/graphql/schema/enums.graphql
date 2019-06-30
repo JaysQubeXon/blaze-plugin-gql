@@ -170,3 +170,22 @@ enum ProductTypes {
   DERIVED
   BUNDLE
 }
+
+enum VerifyMethodTypes {
+  DEFAULT
+  Website
+}
+
+enum IdentificationTypes {
+  Drivers
+}
+
+enum GenderTypes {
+  MALE
+  FEMALE
+}
+
+enum NotificationTypes {
+  None
+  Email
+}

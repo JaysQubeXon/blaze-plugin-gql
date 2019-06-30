@@ -1,0 +1,21 @@
+type SignedContract {
+  id: String
+  created: Int
+  modified: Int
+  deleted: Boolean
+  updated: Boolean
+  companyId: String
+  shopId: String
+  dirty: Boolean
+  contractId: String
+  membershipId: String
+  signedDate: Int
+  signaturePhoto: Address
+  signedDigitally: Boolean
+  consumerId: String
+  memberName: String
+  employeeName: String
+  employeeSignaturePhoto: Address
+  witnessName: String
+  witnessSignaturePhoto: Address
+}

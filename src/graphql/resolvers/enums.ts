@@ -145,5 +145,20 @@ export default {
     REGULAR: "REGULAR",
     DERIVED: "DERIVED",
     BUNDLE: "BUNDLE"
+  },
+  NotificationTypes: {
+    None: "None",
+    Email: "Email"
+  },
+  VerifyMethodTypes: {
+    DEFAULT: "DEFAULT",
+    Website: "Website"
+  },
+  IdentificationTypes: {
+    Drivers: "Drivers"
+  },
+  GenderTypes: {
+    MALE: "MALE",
+    FEMALE: "FEMALE"
   }
 };
